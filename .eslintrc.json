@@ -1,0 +1,56 @@
+{
+    "parser": "babel-eslint",
+    "env": {
+        "jquery": true,
+        "es6": true,
+        "browser": true,
+        "webextensions": true
+    },
+    "extends": "eslint:recommended",
+    "parserOptions": {
+        "ecmaVersion": 12,
+        "sourceType": "module",
+        "allowImportExportEverywhere": true
+    },
+    "rules": {
+        "semi"                      : ["error", "always"],                                        // Les lignes doivent se terminer par ;
+        "comma-dangle"              : ["error", "only-multiline"],                                // Le dernier élément d'un objet peut se terminer par ,
+        "max-len"                   : ["error", { "code": 120 }],                                 // Nombre max de caractères par ligne
+        "object-curly-spacing"      : ["error", "never", { "arraysInObjects": true }],            // Les valeurs d'un tableaux doivent être séparé d'un espace
+        "computed-property-spacing" : ["error", "never", { "enforceForClassMembers": true }],     // Les valeurs d'un objet doivent être séparé d'un espace
+        "for-direction"             : "error",                                                    // Evite les boucles 'pour' infinie
+        "getter-return"             : "error",                                                    // Les getter doivent avoir un return
+        "no-setter-return"          : "error",                                                    // Interdit les return dans les setter
+        "no-cond-assign"            : "error",                                                    // Interdit les assignations dans les conditions
+        "no-console"                : ["error", { "allow": ["log", "warn", "error"] }],           // Interdit l'utilisation de console sauf pour warn & error
+        "no-constant-condition"     : "error",                                                    // Interdit les conditions constantes
+        "no-debugger"               : "error",                                                    // Interdit le debugger
+        "no-dupe-args"              : "error",                                                    // Interdit les duplications d'arguments
+        "no-dupe-else-if"           : "error",                                                    // Interdit les duplications de conditions dans les 'if'
+        "no-dupe-keys"              : "error",                                                    // Interdit les duplications de clés dans les objets
+        "no-duplicate-case"         : "error",                                                    // Interdit les duplications de 'case' dans un 'switch'
+        "no-case-declarations"      : "error",                                                    // Interdit les déclarations dans les 'case'
+        "no-empty-pattern"          : "error",                                                    // Evite de créer des patterns sans effet
+        "no-fallthrough"            : ["error", { "commentPattern": "break[\\s\\w]*omitted" }],   // Interdit les 'case' sans 'break'
+        "no-global-assign"          : "error",                                                    // Interdit l'assignation de valeur dans les variables globales
+        "no-octal"                  : "error",                                                    // Interdit les nombres octet (nombre commencant par 0)
+        "no-redeclare"              : "error",                                                    // Interdit la redéclaration de variable
+        "no-self-assign"            : "error",                                                    // Interdit l'assignatin de soi
+        "no-useless-catch"          : "error",                                                    // Evite les 'catch' sans modifitation entre
+        "no-with"                   : "error",                                                    // Interdit 'with()'
+        "no-useless-escape"         : "error",                                                    // Evite les échapations de caractères inutiles
+        "no-delete-var"             : "error",                                                    // Interdit les 'delete' var
+        "no-shadow-restricted-names": "error",                                                    // Interdit les noms réservés comme nom de variable
+        "no-undef"                  : "error",                                                    // Interdit les variables non définies
+        "no-unused-vars"            : ["error", { "vars": "local", "args": "after-used" }],       // Interdit les variables non utilisées
+        "no-unreachable"            : "error",                                                    // Evite les codes non atteignable
+        "no-unreachable-loop"       : "error",                                                    // Evite les codes non atteignable dans une boucle
+        "keyword-spacing"           : "error",                                                    // Les mots clés doivent être suivis d'un espace
+        "use-isnan"                 : "error",                                                    // Comparer avec NaN doit se faire avec isNan()
+        "no-unsafe-finally"         : "error",                                                    // Interdit les cassures de code dans 'finally'
+        "valid-typeof"              : ["error", { "requireStringLiterals": true }],               // Comparer les types avec des chaines de type
+        "no-unsafe-negation"        : ["error", { "enforceForOrderingRelations": true }],         // Interdit les ! devant des conditions flous
+        "no-eq-null"                : "error",                                                    // Comparaison avec null via === ou !==
+        "sort-keys"                 : "error"                                                     // Oblige à trier les propriétés des objets par order alphabétique
+    }
+}
