@@ -1,21 +1,23 @@
 const nodemailer = require('nodemailer');
 
+const transporter = process.env.GMAIL_ACCOUNT
+   ? nodemailer.createTransport({
+        service: 'gmail',
+        auth: {
+           user: process.env.GMAIL_USER,
+           pass: process.env.GMAIL_PASS,
+        },
+     })
+   : nodemailer.createTransport({
+        host: 'smtp.ethereal.email',
+        port: 587,
+        auth: {
+           user: process.env.ETHER_USER,
+           pass: process.env.ETHER_PASS,
+        },
+     });
+
 exports.send = (req, res) => {
-   // const transporter = nodemailer.createTransport({
-   //    service: 'gmail',
-   //    auth: {
-   //       user: process.env.GMAIL_USER,
-   //       pass: process.env.GMAIL_PASS,
-   //    },
-   // });
-   const transporter = nodemailer.createTransport({
-      host: 'smtp.ethereal.email',
-      port: 587,
-      auth: {
-         user: process.env.ETHER_USER,
-         pass: process.env.ETHER_PASS,
-      },
-   });
    const mailOptions = {
       from: `${req.body.name} <${req.body.email}>`,
       to: `Forth <${process.env.SEND_TO}>`,
