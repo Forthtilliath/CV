@@ -1,0 +1,49 @@
+#formation {
+   position: relative;
+   top: -200px;
+   float: right;
+   margin-right: 5%;
+   padding: 100px 0 60px 50px;
+   width: 45%;
+   max-width: 660px;
+   background: linear-gradient(19deg, #00b4dbb0 0%, #0083b0 100%);
+   clip-path: polygon(0 10%, 90% 0, 100% 100%, 14% 97%);
+
+   #autodidacte {
+      padding-top: 20px;
+   }
+   #freeCodeCamp {
+      padding: 50px 0 0 9%;
+   }
+   #openclassRooms {
+      padding: 50px 0 0 18%;
+   }
+
+   h4 {
+      font-weight: bold;
+      letter-spacing: 0.08em;
+      padding-bottom: 10px;
+      color: #005978;
+      text-shadow: -1px -1px 1px #35b4d5;
+   }
+
+   .counter {
+      display: flex;
+      text-align: center;
+
+      .data {
+         border: 1px solid #35b4d5;
+         width: 170px;
+         margin: 0 4%;
+         box-shadow: 0 0 8px #1c9dc4;
+         padding: 5px 20px;
+
+         .counter-value {
+            font-size: 2em;
+         }
+         span {
+            font-size: 1.8em;
+         }
+      }
+   }
+}

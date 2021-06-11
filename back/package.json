@@ -1,12 +1,12 @@
 {
    "name": "cv",
    "version": "1.0.0",
-   "description": "",
+   "description": "CV avec des technologies web de base : HTML, CSS et un peu de javascript.",
    "main": "server.js",
    "scripts": {
       "start": "nodemon server.js"
    },
-   "author": "",
+   "author": "Forth",
    "license": "ISC",
    "dependencies": {
       "compression": "^1.7.4",

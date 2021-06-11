@@ -1,0 +1,21 @@
+#other-skills {
+   margin-top: 80px;
+   padding: 50px 100px 100px;
+   width: 100%;
+   background-color: #375e97;
+   clip-path: polygon(0 11%, 100% 0, 100% 100%, 0 84%);
+
+   h3 {
+      transform: rotate(-3.2deg);
+      font-size: 3em;
+      padding-top: 30px;
+      text-shadow: -1px 1px 0 maroon;
+      color: #ffbb00;
+   }
+   .cloud {
+      text-align: center;
+      padding: 50px 0;
+      font-size: 2em;
+      text-transform: uppercase;
+   }
+}

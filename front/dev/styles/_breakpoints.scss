@@ -1,0 +1,96 @@
+@include breakpoint(900px) {
+   .infos h5, .typed {
+      font-size: 0.9em;
+   }
+   #langages {
+      margin-left: 1%;
+   }
+   #formation {
+      margin-right: 1%;
+   }
+   .network {
+      font-size: 2em;
+      padding: 10px 20px;
+   }
+}
+
+@include breakpoint(768px) {
+   .navbar {
+      display: none !important;
+   }
+   .fixed-top {
+      position: unset !important;
+   }
+   h1, h2 {
+      font-size: 2em;
+   }
+   #langages {
+      width: 80%;
+      margin-left: 10%;
+   }
+   #formation {
+      margin: 210px 0 0 10%;
+      width: 80%;
+      float: none;
+      display: block;
+   }
+   .counter-value {
+      font-size: 1em;
+   }
+   .data span {
+      font-size: .8em;
+   }
+   #parcours {
+      margin-top: -50px;
+      width: 90%;
+   }
+   .legende p {
+      display: none;
+   }
+   #other-skills h3, #hobbies h3, footer h3 {
+      font-size: 2em;
+   }
+   .cloud {
+      font-size: 1.3em;
+   }
+   .flip-box-back p {
+      padding: 10px 0;
+   }
+   .network {
+      font-size: 1.4em;
+      padding: 20px 30px;
+   }
+   input, textarea {
+      width: 300px;
+   }
+}
+
+@include breakpoint(520px) {
+   h1 {
+      padding-top: 20px;
+   }
+   h3 {
+      font-size: 1em !important;
+   }
+   #freeCodeCamp, #openClassRooms {
+      padding: 50px 0 0;
+   }
+   .projet:not(:first-child) {
+      margin-left: 0;
+   }
+   .legende {
+      opacity: 1;
+   }
+   /* .cloud {
+      font-size: 0.7em;
+   } */
+   #other-skills {
+      display: none;
+   }
+   #hobbies {
+      margin-top: -30px;
+   }
+   .flip-box-back p {
+      font-size: 0.7em;
+   }
+}

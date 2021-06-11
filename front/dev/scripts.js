@@ -91,10 +91,10 @@ function after_form_submitted(data) {
       $('#success_message').show();
       $('#error_message').hide();
    } else {
-      $('#error_message').append('<ul></ul>');
+      $('#error_message').append('<ul>');
 
       jQuery.each(data.errors, function (key, val) {
-         $('#error_message ul').append('<li>' + key + ':' + val + '</li>');
+         $('#error_message ul').append($('<li>').text(val));
       });
       $('#success_message').hide();
       $('#error_message').show();
@@ -121,7 +121,7 @@ $('#reused_form').submit(function (e) {
       $btn = $(this);
       $btn.prop('type', 'button');
       $btn.prop('orig_label', $btn.text());
-      $btn.text('Sending ...');
+      $btn.text('Envoi en cours ...');
    });
 
    $.ajax({
@@ -129,6 +129,33 @@ $('#reused_form').submit(function (e) {
       url: 'http://localhost:3000/api/mail/send',
       data: $form.serialize(),
       success: after_form_submitted,
+      error: () => after_form_submitted({ errors: ["Connexion à l'API impossible"] }),
       dataType: 'json',
    });
 });
+
+// PRE-REMPLISSAGE DU FORM
+document.querySelector('#name').value = 'Albert';
+document.querySelector('#email').value = 'opjpo@oihoih.fr';
+document.querySelector('#message').value = "Hey mon ami, t'aimes ca manger des patates.";
+
+// TODO Ajouter une barre de progression en haut de la page
+// https://www.alsacreations.com/article/lire/1615-cest-quoi-le-responsive-web-design.html
+
+// e = s('.lecture:first');
+// 0 < e.length &&
+//    ((alsacreations.$window = s(window)),
+//    (alsacreations.lp = s('<div class="progress"></div>')),
+//    alsacreations.lp.appendTo('#hrtop'),
+//    (alsacreations.lpmin = e.offset().top),
+//    (alsacreations.lph = e.height()),
+//    alsacreations.$window.off('scroll.lecture').on('scroll.lecture', function () {
+//       clearTimeout(alsacreations.lectureTimeout),
+//          (alsacreations.lectureTimeout = setTimeout(function () {
+//             var e = Math.min(
+//                (Math.max(alsacreations.$window.scrollTop() - alsacreations.lpmin, 0) / alsacreations.lph) * 100,
+//                100,
+//             );
+//             alsacreations.lp.width(e + '%');
+//          }, 150));
+//    }));

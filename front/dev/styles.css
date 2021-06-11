@@ -162,7 +162,7 @@ header .button:hover a {
 .counter-value {
    font-size: 2em;
 }
-.data-span {
+.data span {
    font-size: 1.8em;
 }
 
@@ -616,7 +616,7 @@ footer p {
    .counter-value {
       font-size: 1em;
    }
-   .data-span {
+   .data span {
       font-size: .8em;
    }
    #parcours {
