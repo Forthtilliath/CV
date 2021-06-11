@@ -189,10 +189,6 @@ header .button:hover a {
   font-size: 2em;
 }
 
-#formation .counter .data span {
-  font-size: 1.8em;
-}
-
 #parcours {
   max-width: 800px;
   margin: 640px auto 180px;
@@ -233,6 +229,7 @@ header .button:hover a {
 
 #parcours .timeline p {
   line-height: 1.9em;
+  text-shadow: 1px 1px 2px #fd7044, 0 0 1em #fff, 0 0 0.2em #ffc107;
 }
 
 #parcours .timeline:nth-child(1) {
@@ -460,13 +457,13 @@ header .button:hover a {
   padding: 50px 100px 100px;
   width: 100%;
   background-color: #375e97;
-  -webkit-clip-path: polygon(0 11%, 100% 0, 100% 100%, 0 84%);
-          clip-path: polygon(0 11%, 100% 0, 100% 100%, 0 84%);
+  -webkit-clip-path: polygon(0 11%, 100% 0, 100% 100%, 0 85%);
+          clip-path: polygon(0 11%, 100% 0, 100% 100%, 0 85%);
 }
 
 #other-skills h3 {
-  -webkit-transform: rotate(-3.2deg);
-          transform: rotate(-3.2deg);
+  -webkit-transform: rotate(-3.5deg);
+          transform: rotate(-3.5deg);
   font-size: 3em;
   padding-top: 30px;
   text-shadow: -1px 1px 0 maroon;
@@ -481,10 +478,10 @@ header .button:hover a {
 }
 
 #hobbies {
-  padding: 250px 50px 100px 50px;
-  margin: -300px 0 -90px 0;
-  -webkit-clip-path: polygon(0 21%, 100% 31%, 100% 95%, 0 100%);
-          clip-path: polygon(0 21%, 100% 31%, 100% 95%, 0 100%);
+  padding: 200px 50px 100px 50px;
+  margin: -220px 0 -90px 0;
+  -webkit-clip-path: polygon(0% 14%, 100% 30%, 100% 95%, 0px 100%);
+          clip-path: polygon(0% 14%, 100% 30%, 100% 95%, 0px 100%);
   background-color: #ffbb00;
 }
 

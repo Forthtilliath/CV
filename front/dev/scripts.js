@@ -83,6 +83,13 @@ $(window).scroll(function () {
 
 // AOS
 AOS.init();
+document.addEventListener('aos:in', ({ detail }) => {
+   console.log('animated in', detail);
+});
+
+document.addEventListener('aos:out', ({ detail }) => {
+   console.log('animated out', detail);
+});
 
 // MAIL
 function after_form_submitted(data) {
