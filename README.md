@@ -10,6 +10,14 @@ Ce projet utilise des règles CSS que j'utilise rarement. Sachant que le CSS est
 
 Pas de réels problèmes rencontrés à part des soucis de responsivité et un manque de lisité par endroits.
 
+Toutefois ce CV dispose d'un formulaire pour la prise de contact. Dans la vidéo, l'envoi du mail se faire à l'aide d'un bout de code en php. N'ayant pas de serveur online et n'ayant pas réussi à configuration Wamp pour l'envoi de mail en local, j'ai pris la décision de faire cela autrement.
+
+## Envoi des mails à l'aide de Sendmail
+
+J'ai mis en place un serveur backend avec pour seul objectif l'envoi de mails à la validation du formulaire.
+
+![fonction sendmail](screenshots/sendmail.png)
+
 # Améliorations apportées au projet
 
 Le première des améliorations apportées a été de corriger les problèmes de responsivités rencontrés et ajouter des text-shadow pour rendre plus lisible certains textes.
